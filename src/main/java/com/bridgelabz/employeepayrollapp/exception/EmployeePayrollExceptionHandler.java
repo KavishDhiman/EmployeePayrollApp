@@ -20,4 +20,18 @@ public class EmployeePayrollExceptionHandler {
 
         return errors;
     }
+
+
+    public class EmployeePayrollException extends RuntimeException {
+
+        public EmployeePayrollException(String message) {
+            super(message);
+        }
+    }
+    @ExceptionHandler(EmployeePayrollException.class)
+    public Map<String, String> handleEmployeeException(EmployeePayrollException ex) {
+        Map<String, String> error = new HashMap<>();
+        error.put("error", ex.getMessage());
+        return error;
+    }
 }
