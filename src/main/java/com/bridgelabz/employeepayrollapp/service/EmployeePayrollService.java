@@ -37,8 +37,8 @@ public class EmployeePayrollService implements IEmployeePayrollService {
     public EmployeePayrollData updateEmployeePayrollData(int id, EmployeePayrollDTO dto) {
         EmployeePayrollData emp = this.getEmployeePayrollDataById(id);
         if (emp != null) {
-            emp.setName(dto.name);
-            emp.setSalary(dto.salary);
+            emp.setName(dto.getName());
+            emp.setSalary(dto.getSalary());
         }
         return emp;
     }

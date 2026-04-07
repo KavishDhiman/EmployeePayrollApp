@@ -11,8 +11,8 @@ public class EmployeePayrollData {
     // ✅ REQUIRED CONSTRUCTOR
     public EmployeePayrollData(int id, EmployeePayrollDTO dto) {
         this.id = id;
-        this.name = dto.name;
-        this.salary = dto.salary;
+        this.name = dto.getName();
+        this.salary = dto.getSalary();
     }
 
     public int getId() { return id; }
